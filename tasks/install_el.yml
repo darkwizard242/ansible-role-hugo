@@ -1,7 +1,7 @@
 ---
 # tasks file for hugo
 
-- name: "Downloading and extracting {{ hugo_app }} {{ hugo_version }} on Debian based systems."
+- name: "Downloading and extracting {{ hugo_app }} {{ hugo_version }} on EL based systems."
   unarchive:
     src: "{{ hugo_dl_url }}"
     dest: "{{ hugo_bin_path }}"
