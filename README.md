@@ -31,7 +31,6 @@ hugo_app      | hugo_extended                                                   
 hugo_version  | 0.68.3                                                                                                                              | Defined to dynamically fetch the desired version to install. Defaults to: **0.68.3**
 hugo_osarch   | {{ ansible_system }}-64bit                                                                                                          | Defines os architecture. Used for obtaining the correct type of binaries based on OS System Architecture. Defaults to: **{{ ansible_system }}-64bit**
 hugo_dl_url   | <https://github.com/gohugoio/hugo/releases/download/v{{> hugo_version }}/{{ hugo_app }}_{{ hugo_version }}_{{ hugo_osarch }}.tar.gz | Defines URL to download the hugo binary from.
-hugo_dl_loc   | /tmp                                                                                                                                | Defined to dynamically set where to place the binary archive for `hugo` temporarily. Defaults to: **/tmp**
 hugo_bin_path | /usr/local/bin                                                                                                                      | Defined to dynamically set the appropriate path to store hugo binary into. Defaults to (as generally available on any user's PATH): **/usr/local/bin**
 
 ## Dependencies
