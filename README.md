@@ -2,7 +2,7 @@
 
 # Ansible Role: Hugo
 
-Role to install (_by default_) extended `hugo` on **Debian/Ubuntu** and **EL** systems.
+Role to install (_by default_) extended [hugo](https://github.com/gohugoio/hugo) on **Debian/Ubuntu** and **EL** systems.
 
 ## Requirements
 
