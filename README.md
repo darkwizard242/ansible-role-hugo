@@ -45,7 +45,7 @@ For default behaviour of role (i.e. installation of **hugo**) in ansible playboo
 ```yaml
 - hosts: servers
   roles:
-    - role: darkwizard242.hugo
+    - darkwizard242.hugo
 ```
 
 For customizing behavior of role (i.e. specifying the desired **hugo** version) in ansible playbooks.
@@ -53,9 +53,9 @@ For customizing behavior of role (i.e. specifying the desired **hugo** version) 
 ```yaml
 - hosts: servers
   roles:
-    - role: darkwizard242.hugo
-      vars:
-        hugo_version: 0.67.1
+    - darkwizard242.hugo
+  vars:
+    hugo_version: 0.67.1
 ```
 
 For customizing behavior of role (i.e. placing binary of **hugo** package in different location) in ansible playbooks.
@@ -63,9 +63,9 @@ For customizing behavior of role (i.e. placing binary of **hugo** package in dif
 ```yaml
 - hosts: servers
   roles:
-    - role: darkwizard242.hugo
-      vars:
-        hugo_bin_path: /bin/
+    - darkwizard242.hugo
+  vars:
+    hugo_bin_path: /bin/
 ```
 
 ## License
