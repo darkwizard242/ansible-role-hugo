@@ -7,4 +7,4 @@
     dest: "{{ hugo_bin_path }}"
     extra_opts:
       - hugo
-    remote_src: true
+    remote_src: yes
