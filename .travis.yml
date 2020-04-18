@@ -43,4 +43,4 @@ script:
   - molecule test
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/?branch=master
-  slack: alimuhammaddev:$SLACK_TRAVIS_TOKEN
+  slack: alimuhammaddev:mHrxjANOswLzNvuTAmehkWGz
