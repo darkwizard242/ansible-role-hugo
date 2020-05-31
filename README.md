@@ -16,7 +16,7 @@ Available variables are listed below (located in `defaults/main.yml`):
 
 ```yaml
 hugo_app: hugo_extended
-hugo_version: 0.71.0
+hugo_version: 0.72.0
 hugo_osarch: {{ ansible_system }}-64bit
 hugo_dl_url: https://github.com/gohugoio/hugo/releases/download/v{{ hugo_version }}/{{ hugo_app }}_{{ hugo_version }}_{{ hugo_osarch }}.tar.gz
 hugo_bin_path: /usr/local/bin
@@ -27,7 +27,7 @@ hugo_bin_path: /usr/local/bin
 Variable      | Value (default)                                                                                                                     | Description
 ------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------
 hugo_app      | hugo_extended                                                                                                                       | Defines the app to install i.e. **hugo_extended**
-hugo_version  | 0.71.0                                                                                                                              | Defined to dynamically fetch the desired version to install. Defaults to: **0.71.0**
+hugo_version  | 0.72.0                                                                                                                              | Defined to dynamically fetch the desired version to install. Defaults to: **0.72.0**
 hugo_osarch   | {{ ansible_system }}-64bit                                                                                                          | Defines os architecture. Used for obtaining the correct type of binaries based on OS System Architecture. Defaults to: **{{ ansible_system }}-64bit**
 hugo_dl_url   | <https://github.com/gohugoio/hugo/releases/download/v{{> hugo_version }}/{{ hugo_app }}_{{ hugo_version }}_{{ hugo_osarch }}.tar.gz | Defines URL to download the hugo binary from.
 hugo_bin_path | /usr/local/bin                                                                                                                      | Defined to dynamically set the appropriate path to store hugo binary into. Defaults to (as generally available on any user's PATH): **/usr/local/bin**
