@@ -6,13 +6,25 @@ testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
     os.environ['MOLECULE_INVENTORY_FILE']).get_hosts('all')
 
 
+PACKAGE_BINARY = '/usr/local/bin/hugo'
+
+
 def test_hugo_binary_exists(host):
-    assert host.file('/usr/local/bin/hugo').exists
+    """
+    Tests if hugo binary exists.
+    """
+    assert host.file(PACKAGE_BINARY).exists
 
 
 def test_hugo_binary_file(host):
-    assert host.file('/usr/local/bin/hugo').is_file
+    """
+    Tests if hugo binary is a file type.
+    """
+    assert host.file(PACKAGE_BINARY).is_file
 
 
 def test_hugo_binary_which(host):
-    assert host.check_output('which hugo') == '/usr/local/bin/hugo'
+    """
+    Tests the output to confirm hugo's binary location.
+    """
+    assert host.check_output('which hugo') == PACKAGE_BINARY
