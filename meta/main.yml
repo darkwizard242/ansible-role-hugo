@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   role_name: hugo
-  author: Ali Muhammad
+  author: darkwizard242
   description: Installs/Uninstalls 'Hugo', which is one of the most popular open source static site generator.
   company: none
   license: MIT
