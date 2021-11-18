@@ -16,7 +16,7 @@ Available variables are listed below (located in `defaults/main.yml`):
 
 ```yaml
 hugo_app: hugo_extended
-hugo_version: 0.89.2
+hugo_version: 0.89.4
 hugo_osarch: {{ ansible_system }}-64bit
 hugo_dl_url: https://github.com/gohugoio/hugo/releases/download/v{{ hugo_version }}/{{ hugo_app }}_{{ hugo_version }}_{{ hugo_osarch }}.tar.gz
 hugo_bin_path: /usr/local/bin
@@ -27,7 +27,7 @@ hugo_bin_path: /usr/local/bin
 Variable      | Description
 ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------
 hugo_app      | Defines the app to install i.e. **hugo_extended**
-hugo_version  | Defined to dynamically fetch the desired version to install. Defaults to: **0.89.2**
+hugo_version  | Defined to dynamically fetch the desired version to install. Defaults to: **0.89.4**
 hugo_osarch   | Defines os architecture. Used for obtaining the correct type of binaries based on OS System Architecture. Defaults to: **{{ ansible_system }}-64bit**
 hugo_dl_url   | Defines URL to download the hugo binary from.
 hugo_bin_path | Defined to dynamically set the appropriate path to store hugo binary into. Defaults to (as generally available on any user's PATH): **/usr/local/bin**
