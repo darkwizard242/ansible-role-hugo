@@ -16,7 +16,7 @@ Available variables are listed below (located in `defaults/main.yml`):
 
 ```yaml
 hugo_app: hugo_extended
-hugo_version: 0.92.0
+hugo_version: 0.92.1
 hugo_osarch: {{ ansible_system }}-64bit
 hugo_dl_url: https://github.com/gohugoio/hugo/releases/download/v{{ hugo_version }}/{{ hugo_app }}_{{ hugo_version }}_{{ hugo_osarch }}.tar.gz
 hugo_bin_path: /usr/local/bin
