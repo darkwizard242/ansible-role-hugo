@@ -8,3 +8,6 @@
     extra_opts:
       - hugo
     remote_src: yes
+    owner: "{{ hugo_file_owner }}"
+    group: "{{ hugo_file_group }}"
+    mode: "{{ hugo_file_mode }}"

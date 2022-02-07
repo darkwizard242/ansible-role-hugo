@@ -3,6 +3,10 @@
 
 hugo_app: hugo_extended
 hugo_version: 0.92.1
-hugo_osarch: "{{ ansible_system }}-64bit"
-hugo_dl_url: https://github.com/gohugoio/hugo/releases/download/v{{ hugo_version }}/{{ hugo_app }}_{{ hugo_version }}_{{ hugo_osarch }}.tar.gz
+hugo_os: "{{ ansible_system }}"
+hugo_arch: "64bit"
+hugo_dl_url: https://github.com/gohugoio/hugo/releases/download/v{{ hugo_version }}/{{ hugo_app }}_{{ hugo_version }}_{{ hugo_os }}-{{ hugo_arch }}.tar.gz
 hugo_bin_path: /usr/local/bin
+hugo_file_owner: root
+hugo_file_group: root
+hugo_file_mode: '0755'
