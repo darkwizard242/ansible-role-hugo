@@ -1,4 +1,4 @@
-[![build-test](https://github.com/darkwizard242/ansible-role-hugo/workflows/build-and-test/badge.svg?branch=master)](https://github.com/darkwizard242/ansible-role-hugo/actions?query=workflow%3Abuild-and-test) [![release](https://github.com/darkwizard242/ansible-role-hugo/workflows/release/badge.svg)](https://github.com/darkwizard242/ansible-role-hugo/actions?query=workflow%3Arelease) ![Ansible Role](https://img.shields.io/ansible/role/47495?color=dark%20green%20) ![Ansible Role](https://img.shields.io/ansible/role/d/47495?label=role%20downloads) ![Ansible Quality Score](https://img.shields.io/ansible/quality/47495?label=ansible%20quality%20score) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-hugo&metric=alert_status)](https://sonarcloud.io/dashboard?id=ansible-role-hugo) [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-hugo&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=ansible-role-hugo) [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-hugo&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=ansible-role-hugo) [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-hugo&metric=security_rating)](https://sonarcloud.io/dashboard?id=ansible-role-hugo) ![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/darkwizard242/ansible-role-hugo?label=release) ![GitHub repo size](https://img.shields.io/github/repo-size/darkwizard242/ansible-role-hugo?color=orange&style=flat-square)
+[![build-test](https://github.com/darkwizard242/ansible-role-hugo/workflows/build-and-test/badge.svg?branch=master)](https://github.com/darkwizard242/ansible-role-hugo/actions?query=workflow%3Abuild-and-test) [![release](https://github.com/darkwizard242/ansible-role-hugo/workflows/release/badge.svg)](https://github.com/darkwizard242/ansible-role-hugo/actions?query=workflow%3Arelease) ![Ansible Role](https://img.shields.io/ansible/role/d/darkwizard242/hugo) [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-hugo&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=ansible-role-hugo) [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-hugo&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=ansible-role-hugo) [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-hugo&metric=security_rating)](https://sonarcloud.io/dashboard?id=ansible-role-hugo) ![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/darkwizard242/ansible-role-hugo?label=release) ![GitHub repo size](https://img.shields.io/github/repo-size/darkwizard242/ansible-role-hugo?color=orange&style=flat-square)
 
 # Ansible Role: Hugo
 
@@ -16,7 +16,7 @@ Available variables are listed below (located in `defaults/main.yml`):
 
 ```yaml
 hugo_app: hugo_extended
-hugo_version: 0.124.1
+hugo_version: 0.125.0
 hugo_os: "{{ ansible_system }}"
 hugo_arch: "64bit"
 hugo_dl_url: https://github.com/gohugoio/hugo/releases/download/v{{ hugo_version }}/{{ hugo_app }}_{{ hugo_version }}_{{ hugo_os }}-{{ hugo_arch }}.tar.gz
@@ -31,7 +31,7 @@ hugo_file_mode: '0755'
 Variable        | Description
 --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------
 hugo_app        | Defines the app to install i.e. **hugo_extended**
-hugo_version    | Defined to dynamically fetch the desired version to install. Defaults to: **0.124.1**
+hugo_version    | Defined to dynamically fetch the desired version to install. Defaults to: **0.125.0**
 hugo_os         | Defines OS type. Used for obtaining the correct type of binaries based on OS. Defaults to: **{{ ansible_system }}**
 hugo_arch       | Defines Architecture type. Used for obtaining the correct type of binaries based on Architecture. Defaults to: **64bit**
 hugo_dl_url     | Defines URL to download the hugo binary from.
