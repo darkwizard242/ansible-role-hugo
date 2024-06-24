@@ -3,9 +3,17 @@
 
 hugo_app: hugo_extended
 hugo_version: 0.127.0
-hugo_os: "{{ ansible_system }}"
-hugo_arch: "64bit"
-hugo_dl_url: https://github.com/gohugoio/hugo/releases/download/v{{ hugo_version }}/{{ hugo_app }}_{{ hugo_version }}_{{ hugo_os }}-{{ hugo_arch }}.tar.gz
+hugo_os: "{{ ansible_system | lower }}"
+hugo_architecture_map:
+  amd64: amd64
+  arm: arm64
+  x86_64: amd64
+  armv6l: armv6
+  armv7l: armv7
+  aarch64: arm64
+  32-bit: "386"
+  64-bit: amd64
+hugo_dl_url: https://github.com/gohugoio/hugo/releases/download/v{{ hugo_version }}/{{ hugo_app }}_{{ hugo_version }}_{{ hugo_os }}-{{ hugo_architecture_map[ansible_architecture] }}.tar.gz
 hugo_bin_path: /usr/local/bin
 hugo_file_owner: root
 hugo_file_group: root

@@ -17,9 +17,17 @@ Available variables are listed below (located in `defaults/main.yml`):
 ```yaml
 hugo_app: hugo_extended
 hugo_version: 0.127.0
-hugo_os: "{{ ansible_system }}"
-hugo_arch: "64bit"
-hugo_dl_url: https://github.com/gohugoio/hugo/releases/download/v{{ hugo_version }}/{{ hugo_app }}_{{ hugo_version }}_{{ hugo_os }}-{{ hugo_arch }}.tar.gz
+hugo_os: "{{ ansible_system | lower }}"
+hugo_architecture_map:
+  amd64: amd64
+  arm: arm64
+  x86_64: amd64
+  armv6l: armv6
+  armv7l: armv7
+  aarch64: arm64
+  32-bit: "386"
+  64-bit: amd64
+hugo_dl_url: https://github.com/gohugoio/hugo/releases/download/v{{ hugo_version }}/{{ hugo_app }}_{{ hugo_version }}_{{ hugo_os }}-{{ hugo_architecture_map[ansible_architecture] }}.tar.gz
 hugo_bin_path: /usr/local/bin
 hugo_file_owner: root
 hugo_file_group: root
@@ -28,17 +36,17 @@ hugo_file_mode: '0755'
 
 ### Variables table:
 
-Variable        | Description
---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------
-hugo_app        | Defines the app to install i.e. **hugo_extended**
-hugo_version    | Defined to dynamically fetch the desired version to install. Defaults to: **0.127.0**
-hugo_os         | Defines OS type. Used for obtaining the correct type of binaries based on OS. Defaults to: **{{ ansible_system }}**
-hugo_arch       | Defines Architecture type. Used for obtaining the correct type of binaries based on Architecture. Defaults to: **64bit**
-hugo_dl_url     | Defines URL to download the hugo binary from.
-hugo_bin_path   | Defined to dynamically set the appropriate path to store hugo binary into. Defaults to (as generally available on any user's PATH): **/usr/local/bin**
-hugo_file_owner | Owner for the binary file of hugo.
-hugo_file_group | Group for the binary file of hugo.
-hugo_file_mode  | Mode for the binary file of hugo.
+Variable              | Description
+--------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------
+hugo_app              | Defines the app to install i.e. **hugo_extended**
+hugo_version          | Defined to dynamically fetch the desired version to install. Defaults to: **0.127.0**
+hugo_os               | Defines OS type. Used for obtaining the correct type of binaries based on OS.
+hugo_architecture_map | Defines Architecture type. Used for obtaining the correct type of binaries based on Architecture.
+hugo_dl_url           | Defines URL to download the hugo binary from.
+hugo_bin_path         | Defined to dynamically set the appropriate path to store hugo binary into. Defaults to (as generally available on any user's PATH): **/usr/local/bin**
+hugo_file_owner       | Owner for the binary file of hugo.
+hugo_file_group       | Group for the binary file of hugo.
+hugo_file_mode        | Mode for the binary file of hugo.
 
 ## Dependencies
 
