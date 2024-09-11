@@ -16,7 +16,7 @@ Available variables are listed below (located in `defaults/main.yml`):
 
 ```yaml
 hugo_app: hugo_extended
-hugo_version: 0.134.1
+hugo_version: 0.134.2
 hugo_os: "{{ ansible_system | lower }}"
 hugo_architecture_map:
   amd64: amd64
@@ -39,7 +39,7 @@ hugo_file_mode: '0755'
 Variable              | Description
 --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------
 hugo_app              | Defines the app to install i.e. **hugo_extended**
-hugo_version          | Defined to dynamically fetch the desired version to install. Defaults to: **0.134.1**
+hugo_version          | Defined to dynamically fetch the desired version to install. Defaults to: **0.134.2**
 hugo_os               | Defines OS type. Used for obtaining the correct type of binaries based on OS.
 hugo_architecture_map | Defines Architecture type. Used for obtaining the correct type of binaries based on Architecture.
 hugo_dl_url           | Defines URL to download the hugo binary from.
