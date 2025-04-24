@@ -2,7 +2,7 @@
 # defaults file for hugo
 
 hugo_app: hugo_extended
-hugo_version: 0.146.6
+hugo_version: 0.146.7
 hugo_os: "{{ ansible_system | lower }}"
 hugo_architecture_map:
   amd64: amd64
